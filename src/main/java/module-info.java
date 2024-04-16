@@ -8,5 +8,14 @@ module main {
     opens shoppinglist to javafx.fxml, jakarta.xml.bind;
     exports com.jfx.c222jfx;
     exports shoppinglist;
+    exports myjavafx;
+    exports multiplestagedemo;
+    exports buttoninpane;
+    exports showcircle;
+    exports showcirclecentered;
+    exports bindingdemo;
+    exports nodestylerotatedemo;
+    exports clock;
+    exports showtext;
 
 }
