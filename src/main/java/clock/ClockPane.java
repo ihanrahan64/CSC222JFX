@@ -128,6 +128,5 @@ public class ClockPane extends Pane {
     @Override
     public void setHeight(double height) {
         super.setHeight(height);
-        paintClock();
     }
 }
