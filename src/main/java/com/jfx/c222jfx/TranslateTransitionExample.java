@@ -55,7 +55,7 @@ public class TranslateTransitionExample extends Application {
         Group root = new Group(circle);
 
         //Creating a scene object
-        Scene scene = new Scene(root, 600, 300);
+        Scene scene = new Scene(root, 1024, 768);
 
         //Setting title to the Stage
         stage.setTitle("Translate transition example");

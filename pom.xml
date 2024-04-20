@@ -26,7 +26,11 @@
             <version>21-ea+24</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox-examples</artifactId>
+            <version>3.0.2</version>
+        </dependency>
 
 
         <dependency>

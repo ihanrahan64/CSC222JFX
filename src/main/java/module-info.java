@@ -16,6 +16,6 @@ module main {
     exports bindingdemo;
     exports nodestylerotatedemo;
     exports clock;
-    exports showtext;
+
 
 }
