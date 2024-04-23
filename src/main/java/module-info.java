@@ -16,6 +16,8 @@ module main {
     exports bindingdemo;
     exports nodestylerotatedemo;
     exports clock;
-
+    exports unit15.loancalculator;
+    exports unit15.eventhandler;
+    exports unit15.controlcircle;
 
 }
