@@ -19,5 +19,14 @@ module main {
     exports unit15.loancalculator;
     exports unit15.eventhandler;
     exports unit15.controlcircle;
+    exports unit15.anonymoushandler;
+    exports unit15.controlcircle2;
+    exports unit15.controlcircle3;
+    exports unit15.keyevent;
+    exports unit15.mouseevent;
+    exports unit15.observable;
+    exports unit15.innerclass;
+    exports unit15.animation;
+
 
 }

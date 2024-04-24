@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <items>
     <item>
+        <item>ritz cracker</item>
+        <notes>for Abby</notes>
+        <price>3.0</price>
+        <quantity>3</quantity>
+    </item>
+    <item>
+        <item>dog food</item>
+        <notes>kibbles</notes>
+        <price>5.0</price>
+        <quantity>2</quantity>
+    </item>
+    <item>
+        <item>m &amp; m's</item>
+        <notes>1 pound bag</notes>
+        <price>4.0</price>
+        <quantity>5</quantity>
+    </item>
+    <item>
         <item>bread</item>
         <notes>whole wheat</notes>
         <price>2.55</price>
@@ -23,5 +41,17 @@
         <notes>fresh</notes>
         <price>0.5</price>
         <quantity>5</quantity>
+    </item>
+    <item>
+        <item>milk</item>
+        <notes></notes>
+        <price>4.0</price>
+        <quantity>1</quantity>
+    </item>
+    <item>
+        <item>butter</item>
+        <notes></notes>
+        <price>2.0</price>
+        <quantity>1</quantity>
     </item>
 </items>

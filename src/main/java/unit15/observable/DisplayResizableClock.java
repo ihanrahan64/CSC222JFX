@@ -1,18 +1,13 @@
-package clock;
+package unit15.observable;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.util.Duration;
 
-public class DisplayClock extends Application {
+public class DisplayResizableClock extends Application {
     @Override // Override the start method in the Application class
     public void start(Stage primaryStage) {
         // Create a clock and a label
@@ -27,23 +22,19 @@ public class DisplayClock extends Application {
         pane.setBottom(lblCurrentTime);
         BorderPane.setAlignment(lblCurrentTime, Pos.TOP_CENTER);
 
-        // Create a scene and place it in the stage
+        // Create a scene and place the pane in the stage
         Scene scene = new Scene(pane, 250, 250);
         primaryStage.setTitle("DisplayClock"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
 
-      //  Timeline clockUpdate = new Timeline(
-      //          new KeyFrame(Duration.seconds(1),
-      //                  new EventHandler<ActionEvent>() {
+        pane.widthProperty().addListener(ov ->
+                clock.setWidth(pane.getWidth())
+        );
 
-     //                       @Override
-       //                     public void handle(ActionEvent event) {
-       //                         clock.setCurrentTime();
-       //                     }
-       //                 }));
-       // clockUpdate.setCycleCount(Timeline.INDEFINITE);
-       // clockUpdate.play();
+        pane.heightProperty().addListener(ov ->
+                clock.setHeight(pane.getHeight())
+        );
     }
 
     /**

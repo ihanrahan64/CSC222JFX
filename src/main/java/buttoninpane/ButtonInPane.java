@@ -12,7 +12,12 @@ public class ButtonInPane extends Application {
         // Create a scene and place a button in the scene
         StackPane pane = new StackPane();
         pane.getChildren().add(new Button("OK"));
-        Scene scene = new Scene(pane, 200, 50);
+        pane.getChildren().add(new Button("Cancel"));
+        Button btn = new Button("Help!");
+        btn.setLayoutX(0);
+        pane.getChildren().add(btn);
+
+        Scene scene = new Scene(pane, 200, 100);
         primaryStage.setTitle("Button in a pane"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage

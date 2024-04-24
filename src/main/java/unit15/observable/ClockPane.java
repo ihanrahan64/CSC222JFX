@@ -1,7 +1,4 @@
-package clock;
-
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+package unit15.observable;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -13,6 +10,9 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class ClockPane extends Pane {
     private int hour;

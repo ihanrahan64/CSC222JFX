@@ -58,13 +58,14 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtAvgCost;
 
+
     /**
      * Add or modify shopping list item when update button is pressed
      * @param event 
      */
     @FXML
     void handleButtonUpdate(ActionEvent event) {
-        try {
+
             Item i = new Item(itemField.getText(), Integer.parseInt(quantityField.getText()),
                     Float.parseFloat(priceField.getText()), notesField.getText());
             myList.addItem(i);
@@ -72,14 +73,7 @@ public class FXMLDocumentController implements Initializable {
             clearFields();
             itemField.requestFocus();
             updateDisplay();
-        }
-        catch (NumberFormatException ex) {
-            Alert a = new Alert(Alert.AlertType.WARNING);
-            a.setHeaderText("Correct Item Fields");
-            System.out.println(a.contentTextProperty());
-            a.setTitle("Input Error");
-            a.show();
-        }
+
     }
 
     /**
