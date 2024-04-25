@@ -1,8 +1,10 @@
 module main {
+    requires javafx.media;
     requires javafx.controls;
     requires javafx.fxml;
     requires jakarta.xml.bind;
     requires jakarta.activation;
+    requires jdk.xml.dom;
 
     opens com.jfx.c222jfx to javafx.fxml;
     opens shoppinglist to javafx.fxml, jakarta.xml.bind;
@@ -27,6 +29,8 @@ module main {
     exports unit15.observable;
     exports unit15.innerclass;
     exports unit15.animation;
+    exports unit16;
+
 
 
 }

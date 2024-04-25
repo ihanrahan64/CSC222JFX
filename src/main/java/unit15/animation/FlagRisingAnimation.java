@@ -17,7 +17,7 @@ public class FlagRisingAnimation extends Application {
 
         // Add an image view and add it to pane
 
-        ImageView imageView = new ImageView(String.valueOf(getClass().getResource("/images/flag.gif")));
+        ImageView imageView = new ImageView(String.valueOf(getClass().getResource("/images/us.gif")));
         pane.getChildren().add(imageView);
 
         // Create a path transition
