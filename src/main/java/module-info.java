@@ -8,6 +8,7 @@ module main {
 
     opens com.jfx.c222jfx to javafx.fxml;
     opens shoppinglist to javafx.fxml, jakarta.xml.bind;
+    opens calculator to javafx.fxml;
     exports com.jfx.c222jfx;
     exports shoppinglist;
     exports myjavafx;
@@ -30,6 +31,8 @@ module main {
     exports unit15.innerclass;
     exports unit15.animation;
     exports unit16;
+    exports programmingassignment2;
+    exports calculator;
 
 
 

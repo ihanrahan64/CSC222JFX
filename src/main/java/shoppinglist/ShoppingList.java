@@ -23,7 +23,7 @@ public class ShoppingList extends Application {
         stage.setTitle("Shopping List");    // sets title 
         stage.setScene(scene);
         stage.setResizable(false);          // disallow window resize
-        stage.getIcons().add(new Image(String.valueOf(ShoppingList.class.getResource("CVCC_Initials_B.png")))); // add LU icon
+        stage.getIcons().add(new Image(String.valueOf(ShoppingList.class.getResource("CVCC_Initials_B.png"))));
         stage.show();
     }
 

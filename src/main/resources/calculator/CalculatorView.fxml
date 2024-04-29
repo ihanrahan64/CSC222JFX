@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.CalculatorController">
+  <columnConstraints>
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="64.0" minWidth="50.0" prefWidth="55.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="101.0" minWidth="47.0" prefWidth="55.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="80.0" minWidth="8.0" prefWidth="55.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="28.0" prefWidth="55.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+    <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+    <RowConstraints fillHeight="false" maxHeight="172.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="160.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="163.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="163.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints />
+  </rowConstraints>
+   <children>
+      <Button fx:id="buttonZero" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonZeroClick" prefHeight="40.0" prefWidth="51.0" text="0" textAlignment="CENTER" GridPane.rowIndex="10">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonOne" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonOneClick" prefHeight="40.0" prefWidth="50.0" text="1" textAlignment="CENTER" GridPane.rowIndex="9">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonTwo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonTwoClick" prefHeight="40.0" prefWidth="50.0" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonThree" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonThreeClick" prefHeight="40.0" prefWidth="50.0" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonPlus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonPlusClick" prefHeight="40.0" prefWidth="50.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonFive" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonFiveClick" prefHeight="40.0" prefWidth="50.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonSix" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonSixClick" prefHeight="40.0" prefWidth="50.0" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonMinus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMinusClick" prefHeight="40.0" prefWidth="50.0" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonFour" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonFourClick" prefHeight="40.0" prefWidth="50.0" text="4" textAlignment="CENTER" GridPane.rowIndex="8">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonSeven" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonSevenClick" prefHeight="40.0" prefWidth="50.0" text="7" textAlignment="CENTER" GridPane.rowIndex="7">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonEight" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonEightClick" prefHeight="40.0" prefWidth="50.0" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonNine" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonNineClick" prefHeight="40.0" prefWidth="50.0" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonMultiply" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMultiplyClick" prefHeight="40.0" prefWidth="50.0" text="X" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="7">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonEnter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonEnterClick" prefHeight="40.0" prefWidth="103.0" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonDrop" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDropClick" prefHeight="40.0" prefWidth="50.0" text="DROP" textAlignment="CENTER" GridPane.rowIndex="6">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonDivide" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDivideClick" prefHeight="40.0" prefWidth="50.0" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="10">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+         <image>
+            <Image url="@CVCC_Initials_B.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </GridPane.margin>
+      </ImageView>
+      <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="211.0" text="Label" textFill="#fc0829" GridPane.columnSpan="4" GridPane.rowIndex="11" />
+      <TextArea fx:id="display" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="5" GridPane.valignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </TextArea>
+   </children>
+</GridPane>
