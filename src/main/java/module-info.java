@@ -10,7 +10,7 @@ module main {
     opens com.jfx.c222jfx to javafx.fxml;
     opens shoppinglist to javafx.fxml, jakarta.xml.bind;
     opens calculator to javafx.fxml;
-    opens calculatorsolution to  javafx.fxml;
+    //opens calculatorsolution to  javafx.fxml;
     exports com.jfx.c222jfx;
     exports shoppinglist;
     exports myjavafx;
@@ -35,5 +35,5 @@ module main {
     exports unit16;
     exports programmingassignment2;
     exports calculator;
-    exports calculatorsolution;
+    //exports calculatorsolution;
 }
