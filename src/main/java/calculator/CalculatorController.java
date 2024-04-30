@@ -163,12 +163,13 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * TODO: Complete the 7 button handler
-     * @param event
+     * 7 button handler
+     * @param event - not used
      */
     @FXML
     void buttonSevenClick(ActionEvent event) {
-
+        currentVal = currentVal + "7";
+        updateDisplay();
     }
 
     /**
@@ -182,12 +183,13 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * TODO: Complete the 3 button handler
-     * @param event - unused
+     * 3 button handler
+     * @param event - not used
      */
     @FXML
     void buttonThreeClick(ActionEvent event) {
-
+        currentVal = currentVal + "3";
+        updateDisplay();
     }
 
     /**
@@ -201,21 +203,23 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * TODO: Complete the zero button
-     * @param event
+     * 0 button handler
+     * @param event - not used
      */
     @FXML
     void buttonZeroClick(ActionEvent event) {
-
+        currentVal = currentVal + "0";
+        updateDisplay();
     }
 
-    /**
-     * TODO: Complete the + operation
-     * @param event
-     */
+    
     @FXML
     void buttonPlusClick(ActionEvent event) {
-
+        checkCursor();
+        if (!rpn.add())
+            displayErrorMessage("ERROR: Insufficient Operands");
+        else
+            updateDisplay();
     }
     
     @FXML
@@ -227,13 +231,19 @@ public class CalculatorController implements Initializable
             updateDisplay();
     }
 
-    /**
-     * TODO: Complete the divide operation
-     * @param event - unused
-     */
     @FXML
     void buttonDivideClick(ActionEvent event) {
-
+        try {
+            checkCursor();
+            if (!rpn.divide())
+                displayErrorMessage("ERROR: Insufficient Operands");
+            else
+                updateDisplay();
+        }
+        catch (Exception e) {
+            updateDisplay();
+            displayErrorMessage("ERROR: can not divide by 0");
+        }
     }
 
     /**
@@ -249,13 +259,13 @@ public class CalculatorController implements Initializable
             updateDisplay();
     }
 
-    /**
-     * TODO: Complete the sign change event handler
-     * @param event
-     */
     @FXML
     void buttonSignClick(ActionEvent event) {
-
+        checkCursor();
+        if (!rpn.changeSign())
+            displayErrorMessage("ERROR: Insufficient Operands");
+        else
+            updateDisplay();
     }
 
     /**
