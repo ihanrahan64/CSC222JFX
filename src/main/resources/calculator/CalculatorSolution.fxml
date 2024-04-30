@@ -143,7 +143,7 @@
             <Insets />
          </GridPane.margin>
       </ImageView>
-      <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="211.0" text=" " textFill="#fc0829" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+      <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="211.0" text=" " textFill="#fc0829" GridPane.valignment="BOTTOM" GridPane.columnSpan="4" GridPane.rowIndex="5" />
       <TextArea fx:id="display" editable="false" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="5" GridPane.valignment="CENTER">
          <font>
             <Font size="12.0" />
