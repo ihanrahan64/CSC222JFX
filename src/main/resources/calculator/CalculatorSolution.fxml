@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" blendMode="DARKEN" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="257.0" style="-fx-border-color: #174ad1;" vgap="5.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorsolution.CalculatorController">
+<GridPane alignment="CENTER" blendMode="DARKEN" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="257.0" style="-fx-border-color: #174ad1;" vgap="5.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorsolution.CalculatorController">
   <columnConstraints>
       <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="64.0" percentWidth="25.0" />
       <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="101.0" percentWidth="25.0" />
