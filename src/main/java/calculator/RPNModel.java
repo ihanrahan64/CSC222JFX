@@ -10,13 +10,16 @@ public class RPNModel {
     MyStack<Integer> stack = new MyStack<>();
 
     /**
-     * TODO: Complete enter handler
-     * @param val
-     * @return
-     */
+    * Pushes val to top of stack
+    */
     public boolean enter(int val)
     {
-        return false;
+        if (stack.size() == 8)
+            return false;
+        else {
+            stack.push(val);
+            return true;
+        }
     }
 
     public int getTop() throws Exception
@@ -41,12 +44,17 @@ public class RPNModel {
     }
 
     /**
-     * TODO: Complete the multiply handler
-     * @return
+     * Multiply handler
+     * @return true if successful, false otherwise
+     * Removes items from stack and places the calculation result on the stack
      */
     public boolean multiply()
     {
-        return false;
+        if (stack.size() < 2)
+            return false;
+        int v1 = stack.pop();
+        stack.push( stack.pop() * v1);
+        return true;
     }
 
     /**
@@ -78,20 +86,29 @@ public class RPNModel {
     }
 
     /**
-     * TODO: Change the sign of the value on the top of the stack
-     * @return
+     * ChangeSign Handler
+     * @return true if successful, false otherwise
+     * Flips sign for value at top of stack to neg if pos, and to pos if neg
      */
     public boolean changeSign() {
-        return false;
+        if (stack.isEmpty())
+            return false;
+        stack.push( stack.pop() * -1);
+        return true;
     }
 
     /**
-     * TODO: Complete the subtract handler
-     * @return true if successful
+     * Subtract handler
+     * @return true if successful, false otherwise
+     * Removes items from stack and places the calculation result on the stack
      */
     public boolean subtract()
     {
-        return false;
+        if (stack.size() < 2)
+            return false;
+        int v1 = stack.pop();
+        stack.push( stack.pop() - v1);
+        return true;
     }
 
     /**
