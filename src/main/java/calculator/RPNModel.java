@@ -1,17 +1,8 @@
 /**
- * CSIS 312 Assignment 2.
- * @author Wade Schofield and Abby Schofield
- * Model of an RPN Calculator
- * - I have not discussed the source code in my program with anyone other than my instructor’s approved human sources (i.e. programming partner).
- * - I have not used source code obtained from another student, or any other unauthorized source, either modified or unmodified.
- * - If any source code or documentation used in my program was obtained from another source, such as a text book or course notes, that has been clearly noted *   with a proper citation in the comments of my program.
- * - I have not knowingly designed this program in such a way as to defeat or interfere with the normal operation of any machine it is graded on or to produce     apparently correct results when in fact it does not.
  * Complete the methods noted below
  **/
 
 package calculator;
-
-
 
 public class RPNModel {
 
@@ -19,13 +10,21 @@ public class RPNModel {
     MyStack<Integer> stack = new MyStack<>();
 
     /**
-     * Complete enter handler
+     * TODO: Complete enter handler
      * @param val
      * @return
      */
     public boolean enter(int val)
     {
-        return true;
+        return false;
+    }
+
+    public int getTop() throws Exception
+    {
+        if (stack.size() > 0) {
+            return stack.get(stack.size() - 1);
+        }
+        throw new Exception("Nothing on the stack to get!");
     }
 
     /**
@@ -42,12 +41,12 @@ public class RPNModel {
     }
 
     /**
-     * Complete the multiply handler
+     * TODO: Complete the multiply handler
      * @return
      */
     public boolean multiply()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -60,7 +59,8 @@ public class RPNModel {
     {
         if (stack.size() < 2)
             return false;
-        stack.push( stack.pop() / stack.pop());
+        int v1 = stack.pop();
+        stack.push( stack.pop() / v1);
         return true;
     }
 
@@ -78,12 +78,20 @@ public class RPNModel {
     }
 
     /**
-     * Complete the subtract handler
+     * TODO: Change the sign of the value on the top of the stack
+     * @return
+     */
+    public boolean changeSign() {
+        return false;
+    }
+
+    /**
+     * TODO: Complete the subtract handler
      * @return true if successful
      */
     public boolean subtract()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -91,21 +99,12 @@ public class RPNModel {
      * @return string of items on stack separated by carriage returns
      * Note: No modification needed!
      */
-    public String getValues() throws Exception
+    public int[] getValues() throws Exception
     {
-        StringBuilder sb = new StringBuilder();
-        // pre-load display with returns
-        String[] display = new String[MyStack.MAX_SIZE];
-        for (int i = 0; i < MyStack.MAX_SIZE; i++)
-            display[i] = "\n";
-
-        int j = MyStack.MAX_SIZE - 1;
-        for (int i = stack.size() - 1; i >= 0; i--) {
-            display[j] = stack.get(i).toString() + "\n";
-            j--;
+        int[] values = new int[stack.size()];
+        for (int i = 0; i < stack.size(); i++) {
+            values[i] = stack.get(i);
         }
-        for (String l : display)
-            sb.append(l);
-        return sb.toString();
+        return values;
     }
 }

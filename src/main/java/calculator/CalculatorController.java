@@ -1,17 +1,17 @@
 
 package calculator;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.RowConstraints;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -67,7 +67,8 @@ public class CalculatorController implements Initializable
 
     @FXML
     private Button buttonDivide;
-    
+
+
     @FXML
     private TextArea display;
 
@@ -87,8 +88,10 @@ public class CalculatorController implements Initializable
     @FXML
     void buttonDropClick(ActionEvent event) {
         if (currentVal.equals("")) {
-            if (!rpn.drop())
-                displayErrorMessage("No Value to Drop");
+            if (!rpn.drop()) {
+                updateDisplay("No Value to Drop");
+                return;
+            }
         }
         else
         {
@@ -104,18 +107,28 @@ public class CalculatorController implements Initializable
     @FXML
     void buttonEnterClick(ActionEvent event) {
         try {
-            if (rpn.enter(Integer.parseInt(currentVal))){
-                currentVal = "";
-                updateDisplay();
+            if (currentVal.length() == 0) { // if nothing in queue copy top of stack
+                boolean status = rpn.enter(rpn.getTop());
+                if (!status)
+                    updateDisplay("Stack Full");
+                else
+                    updateDisplay();
             }
-            else
-            {
-                displayErrorMessage("Stack Full");
+            else { // else
+                try {
+                    boolean status = rpn.enter(Integer.parseInt(currentVal));
+                    currentVal = "";
+                    updateDisplay();
+                    if (!status)
+                        updateDisplay("Stack Full");
+                } catch (Exception e) {
+                    updateDisplay("Invalid Value");
+                }
             }
         }
         catch (Exception e)
         {
-            displayErrorMessage("Invalid Value");
+            // stack empty - silently ignore
         }
     }
 
@@ -150,7 +163,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * Complete the 7 button handler
+     * TODO: Complete the 7 button handler
      * @param event
      */
     @FXML
@@ -169,7 +182,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * Complete the 3 button handler
+     * TODO: Complete the 3 button handler
      * @param event - unused
      */
     @FXML
@@ -178,7 +191,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * 2 button hanlder
+     * 2 button handler
      * @param event - not used
      */
     @FXML
@@ -188,7 +201,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * Complete the zero button
+     * TODO: Complete the zero button
      * @param event
      */
     @FXML
@@ -197,7 +210,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * Complete the + operation
+     * TODO: Complete the + operation
      * @param event
      */
     @FXML
@@ -215,7 +228,7 @@ public class CalculatorController implements Initializable
     }
 
     /**
-     * Complete the divide operation
+     * TODO: Complete the divide operation
      * @param event - unused
      */
     @FXML
@@ -234,6 +247,15 @@ public class CalculatorController implements Initializable
             displayErrorMessage("ERROR: Insufficient Operands for Multiply");
         else
             updateDisplay();
+    }
+
+    /**
+     * TODO: Complete the sign change event handler
+     * @param event
+     */
+    @FXML
+    void buttonSignClick(ActionEvent event) {
+
     }
 
     /**
@@ -269,11 +291,25 @@ public class CalculatorController implements Initializable
     /**
      * Updates the display and clears the error indicator
      */
+    public void updateDisplay(String errorMessage) {
+        updateDisplay();
+        displayErrorMessage(errorMessage);
+    }
+
+
     public void updateDisplay()
     {
         try {
-            String stack = rpn.getValues();
-            display.setText(stack + currentVal);
+            StringBuilder sb = new StringBuilder();
+            int[] stack = rpn.getValues();
+            int rows = 8;
+            for (int i = 0; i < rows - stack.length + 1; i++) {
+                sb.append('\n'); // top rows to blank line
+            }
+            for (int i = 0; i < stack.length; i++) {
+                sb.append(Integer.toString(stack[i]) + '\n');
+            }
+            display.setText(sb.toString() + currentVal);
             errorMessage.setText("");
         }
         catch(Exception e)
@@ -310,6 +346,6 @@ public class CalculatorController implements Initializable
     {
         rpn = new RPNModel();
         display.setFont(Font.font("System", FontWeight.NORMAL, 11));
-        display.setPrefRowCount(10);
+        display.setPrefRowCount(11);
     }
 }

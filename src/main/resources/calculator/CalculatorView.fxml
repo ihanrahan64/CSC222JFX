@@ -12,29 +12,29 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.CalculatorController">
+<GridPane alignment="CENTER" blendMode="DARKEN" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="257.0" style="-fx-border-color: #174ad1;" vgap="5.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.CalculatorController">
   <columnConstraints>
-      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="64.0" minWidth="50.0" prefWidth="55.0" />
-      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="101.0" minWidth="47.0" prefWidth="55.0" />
-      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="80.0" minWidth="8.0" prefWidth="55.0" />
-      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="28.0" prefWidth="55.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="64.0" percentWidth="25.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="101.0" percentWidth="25.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" percentWidth="25.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" percentWidth="25.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints />
-      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
-    <RowConstraints fillHeight="false" maxHeight="155.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
-    <RowConstraints fillHeight="false" maxHeight="172.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="160.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="163.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
-      <RowConstraints fillHeight="false" maxHeight="163.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" percentHeight="10.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" percentHeight="10.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" percentHeight="10.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" minHeight="57.0" percentHeight="10.0" prefHeight="57.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="155.0" percentHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+    <RowConstraints fillHeight="false" maxHeight="155.0" percentHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="172.0" minHeight="45.0" percentHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="160.0" minHeight="35.0" percentHeight="10.0" prefHeight="69.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="163.0" minHeight="42.0" percentHeight="10.0" prefHeight="42.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="163.0" minHeight="34.0" percentHeight="10.0" prefHeight="44.0" valignment="CENTER" vgrow="NEVER" />
       <RowConstraints />
   </rowConstraints>
    <children>
-      <Button fx:id="buttonZero" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonZeroClick" prefHeight="40.0" prefWidth="51.0" text="0" textAlignment="CENTER" GridPane.rowIndex="10">
+      <Button fx:id="buttonZero" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonZeroClick" prefHeight="39.0" prefWidth="48.0" text="0" textAlignment="CENTER" GridPane.rowIndex="10">
          <effect>
             <DropShadow />
          </effect>
@@ -54,10 +54,13 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="buttonPlus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonPlusClick" prefHeight="40.0" prefWidth="50.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="9">
+      <Button fx:id="buttonPlus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonPlusClick" prefHeight="40.0" prefWidth="50.0" text="+" textAlignment="CENTER" textFill="#174ad1" GridPane.columnIndex="3" GridPane.rowIndex="9">
          <effect>
             <DropShadow />
          </effect>
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
       </Button>
       <Button fx:id="buttonFive" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonFiveClick" prefHeight="40.0" prefWidth="50.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8">
          <effect>
@@ -69,10 +72,13 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="buttonMinus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMinusClick" prefHeight="40.0" prefWidth="50.0" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8">
+      <Button fx:id="buttonMinus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMinusClick" prefHeight="40.0" prefWidth="50.0" text="-" textAlignment="CENTER" textFill="#174ad1" GridPane.columnIndex="3" GridPane.rowIndex="8">
          <effect>
             <DropShadow />
          </effect>
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
       </Button>
       <Button fx:id="buttonFour" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonFourClick" prefHeight="40.0" prefWidth="50.0" text="4" textAlignment="CENTER" GridPane.rowIndex="8">
          <effect>
@@ -94,42 +100,74 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="buttonMultiply" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMultiplyClick" prefHeight="40.0" prefWidth="50.0" text="X" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="7">
+      <Button fx:id="buttonMultiply" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonMultiplyClick" prefHeight="40.0" prefWidth="50.0" text="X" textAlignment="CENTER" textFill="#174ad1" GridPane.columnIndex="3" GridPane.rowIndex="7">
          <effect>
             <DropShadow />
          </effect>
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
       </Button>
-      <Button fx:id="buttonEnter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonEnterClick" prefHeight="40.0" prefWidth="103.0" text="ENTER" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10">
+      <Button fx:id="buttonEnter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonEnterClick" prefHeight="34.0" prefWidth="112.0" text="ENTER" textAlignment="CENTER" textFill="#05861b" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="10">
          <effect>
             <DropShadow />
          </effect>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
       </Button>
-      <Button fx:id="buttonDrop" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDropClick" prefHeight="40.0" prefWidth="50.0" text="DROP" textAlignment="CENTER" GridPane.rowIndex="6">
+      <Button fx:id="buttonDrop" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDropClick" prefHeight="32.0" prefWidth="56.0" text="DROP" textAlignment="CENTER" textFill="#05861b" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="6">
          <effect>
             <DropShadow />
          </effect>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
       </Button>
-      <Button fx:id="buttonDivide" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDivideClick" prefHeight="40.0" prefWidth="50.0" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="10">
+      <Button fx:id="buttonDivide" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonDivideClick" prefHeight="40.0" prefWidth="50.0" text="/" textAlignment="CENTER" textFill="#174ad1" GridPane.columnIndex="3" GridPane.rowIndex="6">
          <effect>
             <DropShadow />
          </effect>
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
       </Button>
-      <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+      <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
          <image>
             <Image url="@CVCC_Initials_B.png" />
          </image>
          <GridPane.margin>
-            <Insets left="10.0" top="5.0" />
+            <Insets />
          </GridPane.margin>
       </ImageView>
-      <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="211.0" text="Label" textFill="#fc0829" GridPane.columnSpan="4" GridPane.rowIndex="11" />
-      <TextArea fx:id="display" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="5" GridPane.valignment="CENTER">
+      <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="211.0" text="Label" textFill="#fc0829" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+      <TextArea fx:id="display" editable="false" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="5" GridPane.valignment="CENTER">
          <font>
-            <Font size="10.0" />
+            <Font size="12.0" />
          </font>
          <GridPane.margin>
-            <Insets left="20.0" right="20.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
       </TextArea>
+      <Button fx:id="buttonSign" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonSignClick" prefHeight="40.0" prefWidth="50.0" text="+/-" textAlignment="CENTER" textFill="#174ad1" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
+   <opaqueInsets>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </GridPane>
